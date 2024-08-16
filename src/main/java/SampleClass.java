@@ -62,10 +62,19 @@ public class SampleClass {
     public int a;
     public boolean b;
 
-    //    implement a custom .equals(SampleClass other){} method here.
+    public boolean equals(SampleClass other){
+        return ((this.a == other.a) && (this.b == other.b));
+
+    }
+
+    public String toString(){
+
+        String result = this.getClass().getSimpleName() + '\n' + "a: " + this.a + '\n' + "b: " + this.b;
 
 
-    //    implement a custom .toString(){} method here.
+        return result;
+    
 
     
+     }
 }
